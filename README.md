@@ -31,7 +31,6 @@ Before running the project, you need to install the following dependencies:
 
 1. [Install Node.js](https://nodejs.org/) (which includes npm).
 2. [Install Firebase CLI](https://firebase.google.com/docs/cli).
-4. [Google Cloud API Keys](https://cloud.google.com/docs/authentication/getting-started) for the Google Cloud Vision API and Google Cloud Translation API.
 
 ### Setup Steps
 
