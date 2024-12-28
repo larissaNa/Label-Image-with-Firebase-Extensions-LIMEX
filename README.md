@@ -16,9 +16,7 @@ This project is a web application developed with **Firebase**, **HTML**, **CSS**
   - **Firebase Storage** for storing user images.
   
 - **HTML** / **CSS** / **JavaScript**: For building the frontend user interface.
-  
-- **Flask**: Python-based web framework used for backend processing.
-  
+    
 - **Bootstrap**: Frontend framework for creating a responsive and modern user interface.
 
 - **Google Cloud Vision API**: Used for analyzing images and generating labels describing the content.
@@ -33,12 +31,6 @@ Before running the project, you need to install the following dependencies:
 
 1. [Install Node.js](https://nodejs.org/) (which includes npm).
 2. [Install Firebase CLI](https://firebase.google.com/docs/cli).
-3. [Install Python](https://www.python.org/downloads/) and **Flask**:
-
-    ```bash
-    pip install Flask
-    ```
-
 4. [Google Cloud API Keys](https://cloud.google.com/docs/authentication/getting-started) for the Google Cloud Vision API and Google Cloud Translation API.
 
 ### Setup Steps
@@ -74,12 +66,6 @@ Before running the project, you need to install the following dependencies:
 
 7. **Run the application**:
 
-    For the backend (Flask), run:
-
-    ```bash
-    python app.py
-    ```
-
     For the frontend, simply open the `index.html` file in your browser or configure a local development server.
 
 ## Project Structure
@@ -106,5 +92,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
 
-Developed by [Your Name], in collaboration with **Mª Isabelly**, **Luis Guilherme**, and **Iallen Gábio**.
+Developed by **Larissa Souza**, in collaboration with **Mª Isabelly**, **Luis Guilherme**, and **Iallen Gábio**.
 
