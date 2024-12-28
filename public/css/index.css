@@ -1,0 +1,218 @@
+/* Estilos para tema claro */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.light-mode nav, body.light-mode .card, body.light-mode .sidenav {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+body.light-mode nav {
+    background-color: #69a1cf; /* Azul claro */
+    color: white;
+}
+body.light-mode nav a, body.light-mode .card-content, body.light-mode .modal-content {
+    color: #ffffff;
+}
+body.light-mode .btn {
+    background-color: #3e8bc5;
+    color: #ffffff;
+}
+body.light-mode .btn:hover {
+    background-color: #026ba8;
+}
+body.light-mode .material-icons {
+    color: #ffffff;
+}
+body.light-mode .chip {
+    background-color: #c4d0da;
+}
+
+/* Estilos para tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark-mode nav, body.dark-mode .card, body.dark-mode{
+    background-color: #212227;
+    color: #ffffff;
+}
+
+body.dark-mode .sidenav{
+  background-color: #646464;
+  color: white;
+}
+
+body.dark-mode nav {
+    background-color: #2d303d; /* Cinza escuro */
+}
+body.dark-mode nav a, body.dark-mode .card-content, body.dark-mode .modal-content {
+    color: #ffffff;
+}
+body.dark-mode .btn {
+    background-color: #174466;
+    color: #ffffff;
+}
+body.dark-mode .btn:hover {
+    background-color: #106da3;
+}
+body.dark-mode .material-icons {
+    color: #ffffff;
+}
+body.dark-mode .chip {
+    background-color: #536b78;
+    color:  white;
+}
+
+/* Estilos específicos para o menu lateral no modo escuro */
+body.dark-mode .sidenav a {
+    color: #ffffff;
+}
+
+body.dark-mode .file-path {
+  color: white;
+}
+
+/* Transição suave */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+nav, .card, .sidenav, .modal-content, .btn, .material-icons, .chip {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+nav {
+  margin: 0; /* Remove qualquer margem no nav */
+  padding: 0; /* Remove qualquer padding no nav */
+}
+
+nav .brand-logo {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.imgElement {
+  height: 250px; /* Defina a altura desejada aqui */
+  width: 100%; /* Isso fará com que a largura seja flexível */
+  object-fit: contain; /* Isso garante que a imagem inteira seja visível sem distorção */
+}
+
+/* Estilo para posicionar a sidenav à direita */
+.sidenav-right {
+  right: 0;
+}
+
+.sidenav {
+  width: 250px; /* Defina o valor desejado */
+}
+
+/* Estilo para ajustar a direção de abertura da sidenav */
+.sidenav-right .sidenav {
+  right: -100%; /* Esconda a sidenav inicialmente */
+  transform: translateX(100%); /* Movimente a sidenav para fora da tela */
+  transition: transform 0.3s ease; /* Adicione uma transição suave */
+}
+
+/* Estilo para exibir a sidenav quando aberta */
+.sidenav-right.active {
+  transform: translateX(0); /* Movimente a sidenav para dentro da tela */
+}
+
+.chip {
+  max-width: 200px; /* ou outro valor que se adeque ao seu layout */
+  overflow: hidden;
+  word-wrap: break-word;
+  margin-bottom: 5px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+  right: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imageUpload {
+  text-align: center;
+  width: 100%;
+}
+
+button.btn {
+  margin-top: 0; /* Adicione uma margem superior para melhor espaçamento */
+}
+
+@media only screen and (max-width: 920px) {
+  nav {
+    flex-direction: row; /* Altera a direção da flexbox para coluna */
+    text-align: left; /* Alinha o texto da navegação à esquerda */
+    justify-content: space-between; /* Distribui os itens ao longo do espaço disponível */
+    max-width: 100%;
+  }
+
+  nav .brand-logo {
+    left: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 10px; 
+    align-self: flex-start; 
+  }
+
+  nav .material-icons {
+    font-size: 1.5rem;
+  }
+
+  nav #logout-link {
+      display: none; /* Esconde o ícone de logout na nav bar */
+  }
+
+  .sidenav {
+      display: block; /* Mostra o menu lateral no mobile */
+  }
+
+  .sidenav-trigger {
+    left: 86%;
+  }
+
+  .card-image, .card-content {
+    width: 100%; /* Defina a largura como 100% para que ocupem toda a linha */
+  }
+
+  .card .row {
+    display: flex;
+    flex-direction: column; /* Coloque os filhos em uma coluna */
+  }
+}
+
+@media only screen and (min-width: 921px) {
+  .sidenav {
+      display: none; /* Esconde o menu lateral em telas maiores */
+  }
+
+  .card .row {
+    display: flex;
+    flex-direction: row; /* Coloque os filhos em uma linha */
+  }
+
+  .card-image {
+    width: 50%; /* ou qualquer valor que se adeque ao seu layout */
+  }
+
+  .card-content {
+    width: 70%; /* ou qualquer valor que se adeque ao seu layout */
+  }
+}
+

@@ -1,0 +1,267 @@
+/* Estilos para tema claro */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.light-mode nav, body.light-mode .card, body.light-mode .sidenav {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+body.light-mode nav {
+    background-color: #69a1cf; /* Azul claro */
+    color: white;
+}
+body.light-mode nav a, body.light-mode .card-content, body.light-mode .modal-content {
+    color: #ffffff;
+}
+body.light-mode .btn {
+    background-color: #3e8bc5;
+    color: #ffffff;
+}
+body.light-mode .btn:hover {
+    background-color: #026ba8;
+}
+body.light-mode .material-icons {
+    color: #ffffff;
+}
+body.light-mode .chip {
+    background-color: #c5cbd0;
+}
+body.light-mode .footer p, body.light-mode #logout-link-mobile {
+    color: #ffffff;
+}
+
+/* Estilos para tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark-mode nav, body.dark-mode .card, body.dark-mode .sidenav {
+    background-color: #212227;
+    color: #ffffff;
+}
+body.dark-mode nav {
+    background-color: #2d303d; /* Cinza escuro */
+}
+body.dark-mode nav a, body.dark-mode .card-content, body.dark-mode .modal-content {
+    color: #ffffff;
+}
+body.dark-mode .material-icons {
+    color: #ffffff;
+}
+body.dark-mode .input-field .validate {
+  background-color: #2d303d;
+  transition: background-color 0.6s ease, color 0.5s ease;
+
+}
+body.dark-mode .chip {
+    background-color: #536b78;
+    color: white;
+}
+body.dark-mode .sidenav{
+  background-color: #646464;
+  color: white;
+}
+body.dark-mode .footer p, body.dark-mode #logout-link-mobile {
+    color: #ffffff;
+}
+body.dark-mode .footer{ 
+  background-color: #2d303d;
+}
+body.dark-mode #loginButton{
+  color: white;
+}
+body.dark-mode #loginButtonGoogle{
+  background-color: rgb(208, 208, 208);
+}
+
+
+/* Transição suave */
+body, nav, .card, .sidenav, .modal-content, .btn, .material-icons, .chip {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+footer {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/* login.css */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Remove a margem padrão do body */
+}
+
+nav {
+  margin: 0; /* Remove qualquer margem no nav */
+  padding: 0; /* Remove qualquer padding no nav */
+}
+
+nav .brand-logo {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login {
+  width: 100%;
+  max-width: 400px;
+}
+
+#loginbutton {
+  background-color: #64b5f6; /* Azul claro */
+  color: #fff; /* Texto branco */
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #1976d2; /* Azul */
+}
+
+
+
+.input-field input[type=email],
+.input-field input[type=password] {
+  height: 36px; /* Diminuindo a altura dos campos */
+  padding-left: 10px; /* Espaçamento interno à esquerda */
+  font-size: 14px; /* Diminuindo o tamanho da fonte */
+}
+
+.input-field label {
+  margin-bottom: 10px; /* Adicionando espaçamento entre label e campo de entrada */
+  display: block;
+}
+
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label {
+  color: #1976d2; /* Azul */
+}
+
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #1976d2; /* Azul */
+  box-shadow: 0 1px 0 0 #1976d2; /* Azul */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1976d2; /* Azul */
+  height: 50px; /* Altura do footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Certifica-se de que o footer esteja sobreposto a outros elementos */
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  padding-top: 11px;
+
+}
+
+img {
+  height: 20px;
+  width: 20px;
+  top:5%;
+}
+
+#loginButtonGoogle, #loginButton {
+  background-color: #e0e0e000;
+  color: #000;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+/* Estilo para posicionar a sidenav à direita */
+.sidenav-right {
+  right: 0;
+}
+
+.sidenav {
+  width: 250px; /* Defina o valor desejado */
+}
+
+/* Estilo para ajustar a direção de abertura da sidenav */
+.sidenav-right .sidenav {
+  right: -100%; /* Esconda a sidenav inicialmente */
+  transform: translateX(100%); /* Movimente a sidenav para fora da tela */
+  transition: transform 0.3s ease; /* Adicione uma transição suave */
+}
+
+/* Estilo para exibir a sidenav quando aberta */
+.sidenav-right.active {
+  transform: translateX(0); /* Movimente a sidenav para dentro da tela */
+}
+
+/* Para telas menores que 920px */
+@media screen and (max-width: 700px) {
+  body{
+    overflow-y: hidden;
+  }
+
+  main {
+    margin-top: -10%;
+  }
+
+  nav {
+      flex-direction: column; /* Altera a direção da flexbox para coluna */
+      text-align: left; /* Alinha o texto da navegação à esquerda */
+  }
+
+  nav .brand-logo {
+    left: 100px;
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
+    font-size: 20px;
+    padding-left: 10px; /* Mantém o padding à esquerda */
+    align-self: flex-start; /* Alinha o item à esquerda */
+  }
+
+  img{
+    top: 10%;
+  }
+
+  footer {
+      flex-direction: column; /* Altera a direção da flexbox para coluna */
+      height: auto; /* Altura automática para acomodar conteúdo */
+      padding: 20px 0; /* Adiciona espaço interno */
+      text-align: center; /* Centraliza o texto */
+      bottom: 5%;
+  }
+
+  footer p{
+    padding-top: 11px;
+  }
+
+  .card-title {
+      font-size: 20px; /* Reduz o tamanho da fonte do título do card */
+  }
+
+  .sidenav {
+    display: block; /* Mostra o menu lateral no mobile */
+}
+
+.sidenav-trigger {
+  left: 86%;
+}
+}

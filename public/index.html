@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Extensions Label Images</title>
+    <!-- Adicionando Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Adicionando Ícones do Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="">
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo"><span class="bold-text">Rotulação de Imagens</span></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" id="logout-link" onclick="logOut()">
+                    <i class="material-icons">input</i></a></li>
+                <li><a class="botao-dark" onclick="toggleDarkMode()">
+                    <i class="material-icons" id="theme-icon">brightness_2</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <ul class="sidenav sidenav-right" id="mobile-demo">
+        <li><a href="#" id="logout-link-mobile" onclick="logOut()">
+            <i class="material-icons">input</i> Sair</a></li>
+        <li><a class="botao-dark" onclick="toggleDarkMode()">
+            <i class="material-icons" id="theme-icon-mobile">brightness_2</i>Modo noturno</a></li>
+    </ul>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <center>
+                    <div class="card-content">
+                        <div class="row flex-container center-align">
+                            <div class="col s12 m8">
+                                <div class="imageUpload">
+                                    <div class="file-field input-field">
+                                        <div class="btn">
+                                            <span>Escolher arquivo</span>
+                                            <input type="file" id="image-upload" accept="image/*">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12">
+                                          <div class="input-field col s12 m6">
+                                            <select id="language-select">
+                                              <option value="pt" selected>Português</option>
+                                              <option value="en">Inglês</option>
+                                              <option value="es">Espanhol</option>
+                                              <!-- Adicione mais opções conforme necessário -->
+                                            </select>
+                                            <label>Escolha o idioma</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <button class="btn" onclick="uploadImage()">
+                                    <i class="material-icons">cloud_upload</i> 
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row center-align">
+                            <div class="col s12">
+                                <div id="labelsContainer">
+                                    <!-- Aqui serão adicionados os rótulos dinamicamente -->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loading-modal" class="modal">
+        <div class="modal-content">
+          <h5>Enviando imagem...</h5>
+          <div class="preloader-wrapper active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- Firebase JavaScript SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-translate.js"></script>
+
+<script src="js/firebaseInit.js"></script>
+<script src="js/index.js"></script>
+<script src="js/darkmode.js"></script>
+
+<!-- Adicionando Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
