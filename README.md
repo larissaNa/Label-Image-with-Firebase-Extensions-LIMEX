@@ -37,8 +37,8 @@ Before running the project, you need to install the following dependencies:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/repository-name.git
-    cd repository-name
+    git clone https://github.com/larissaNa/Label-Image-with-Firebase-Extensions-LIMEX.git
+    cd repository-Label-Image-with-Firebase-Extensions-LIMEX
     ```
 
 2. **Install Firebase CLI tools**:
